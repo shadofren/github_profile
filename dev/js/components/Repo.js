@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Panel, Row, Col, Label, Image, ListGroup, ListGroupItem, Button } from 'react-bootstrap';
+import { Panel, Row, Col, Label, Image, ListGroup, ListGroupItem, Button, Glyphicon } from 'react-bootstrap';
 
 class Repo extends React.Component {
     /* 
@@ -15,7 +15,7 @@ class Repo extends React.Component {
         return (
             <ListGroupItem>
                 <Panel header={repo.name}>
-                    {last_update}<br />
+                    {last_update}  <a href={repo.html_url}><Glyphicon glyph="new-window" /></a><br />
                     {description}<br />
                     {repo.open_issues_count} Open Issues
                 </Panel>
