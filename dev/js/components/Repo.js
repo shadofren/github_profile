@@ -11,10 +11,12 @@ class Repo extends React.Component {
     render(){
         let repo = this.props.repo;
         let description = repo.description || "no description"
+        let last_update = `Last updated at: ${new Date(repo.updated_at)}`;
         return (
             <ListGroupItem>
                 <Panel header={repo.name}>
-                    {description}<br/>
+                    {last_update}<br />
+                    {description}<br />
                     {repo.open_issues_count} Open Issues
                 </Panel>
             </ListGroupItem>
