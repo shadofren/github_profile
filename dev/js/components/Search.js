@@ -11,7 +11,10 @@ class Search extends React.Component{
 
     handleSubmit(e){
         e.preventDefault();
-        let username = ReactDOM.findDOMNode(this.refs.username).value;
+        let username = ReactDOM.findDOMNode(this.refs.username).value.trim();
+        if (!username){
+            return
+        }
         this.props.fetchUserData(username);
         this.props.fetchUserRepos(username, this.props.perPage);
     }
