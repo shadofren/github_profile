@@ -1,0 +1,20 @@
+$primary: green;
+
+body {
+	background-color: cornflowerblue;
+}
+h2 {
+	color: $primary;
+}
+
+a {
+	text-decoration: none;
+}
+
+ul {
+	list-style: none;
+}
+
+.label {
+	margin-right: 10px;
+}
